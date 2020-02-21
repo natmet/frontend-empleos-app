@@ -1,0 +1,39 @@
+<div>
+
+    <h3>Crear O Editar Empleo.</h3>
+    <form (ngSubmit)="save()" #empleoForm="ngForm">
+        <div class="form-group">
+            <label for="posicion">Posicion</label>
+            <input class="form-control" id="posicion" name="posicion" [(ngModel)]="empleo.posicion">
+        </div>
+
+        <div class="form-group">
+            <label for="empresa">Compañia</label>
+            <input class="form-control" id="empresa" name="empresa" [(ngModel)]="empleo.compania">
+        </div>
+
+        <div class="form-group">
+            <label for="salario">Salario</label>
+            <input class="form-control" id="salario" name="salario" [(ngModel)]="empleo.salario">
+        </div>
+
+        <div class="form-group">
+            <label for="descripcion">Descripcion</label>
+            <input class="form-control" id="descripcion" name="descripcion" [(ngModel)]="empleo.descripcion">
+        </div>
+
+        <div class="form-group">
+            <label for="ubicacion">Ubicacion</label>
+            <input class="form-control" id="ubicacion" name="ubicacion" [(ngModel)]="empleo.ubicacion">
+        </div>
+
+        <button id="btnVolver" type="button" class="btn btn-secondary mr-2" (click)="back()">
+            <span>Volver</span>
+        </button>
+
+        <button id="btnGuardar" type="submit" class="btn btn-primary">
+            <span>Guardar</span>
+        </button>
+    </form>
+
+</div>

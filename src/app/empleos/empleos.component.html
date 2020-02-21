@@ -1,0 +1,31 @@
+<div>
+    <button type="button" routerLink="/empleos/new" class="btn btn-primary"> Crear Nuevo Empleo</button>
+</div>
+
+<table class="table table-striped">
+
+    <thead>
+        <tr>
+            <th>Posicion</th>
+            <th>Ubicacion</th>
+            <th>Compañia</th>
+            <th>Fecha Publicacion</th>
+
+
+        </tr>
+    </thead>
+    <tbody>
+
+        <tr *ngFor="let empleo of empleos">
+
+            <td>{{ empleo.posicion }}</td>
+            <td>{{ empleo.ubicacion }}</td>
+            <td>{{ empleo.compania }}</td>
+            <td>{{ empleo.fechaPublicado  | date: 'dd/MM/yyyy' }}</td>
+
+        </tr>
+
+    </tbody>
+
+
+</table>

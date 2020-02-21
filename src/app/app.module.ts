@@ -1,16 +1,26 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { EmpleoDetalleComponent } from './empleo-detalle/empleo-detalle.component';
+import { EmpleosComponent } from './empleos/empleos.component';
+import { EmpleoUpdateComponent } from './empleo-update/empleo-update.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    EmpleoDetalleComponent,
+    EmpleosComponent,
+    EmpleoUpdateComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    FormsModule,
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
